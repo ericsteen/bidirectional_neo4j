@@ -9,7 +9,7 @@ class Parser
 	end
 
 	def initialize(filename)
-		@filename = filename
+    @filename = filename
 	end
 
 	def process_file
