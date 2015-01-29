@@ -13,9 +13,9 @@ class Parser
 	end
 
 	def process_file
-		::SmarterCSV.process(filename, {:comment_regexp => /^#/, :chunk_size => 200}) do |chunk|
-		  UserWorker.perform_async(chunk) # pass chunks of CSV-data to sidekiq workers for parallel processing
-		end
+	  ::SmarterCSV.process(filename, {:comment_regexp => /^#/, :chunk_size => 200}) do |chunk|
+	    UserWorker.perform_async(chunk) # pass chunks of CSV-data to sidekiq workers for parallel processing
+	  end
 	end
 end
 
