@@ -1,10 +1,9 @@
-Coding Challenge: 
 
 Given a csv in the form of:
 
 user_a_id, user_b_id
 
-Write a ruby script that will connect to Neo4J and create a bidirectional relationship between two nodes with those ids. 
+A ruby script that will connect to Neo4J and create a bidirectional relationship between two nodes with those ids. 
 
 If either node already exists it should be found for the new relationship. 
 
