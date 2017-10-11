@@ -7,7 +7,7 @@ class UserWorker
 	include Sidekiq::Worker
 
 	def neo
-		@neo ||= ::Neography::Rest.new
+	@neo ||= ::Neography::Rest.new
 	end
 
 	def perform(chunk)
